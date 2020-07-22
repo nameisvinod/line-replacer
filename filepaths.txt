@@ -1,3 +1,0 @@
-files/fileone.js
-files/filethree.txt
-files/filetwo.js

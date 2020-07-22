@@ -1,4 +1,4 @@
-# LINE REPLACER
+# Line Replacer
 
 ## About
 
@@ -15,6 +15,15 @@ Install the latest version of node and npm from [here](https://nodejs.org/en/dow
 <li>Test NPM. To see if NPM is installed, type <code>npm -v</code> in Terminal. This should print the version number so you’ll see something like this <code>6.4.1</code></li>
 
 ## Install
+
+    git clone https://github.com/nameisvinod/line-replacer.git && cd line-replacer/
+
+    npm install
+
+## Configuration
+
+<li>Create a folder named '<code>changeLogs</code>' in root directory</li>
+<li>'<code>filepaths.txt</code>' folder should contain the absolute path to the files that need to be updated</li>
 
 ## Commands
 
