@@ -16,7 +16,7 @@ Install the latest version of node and npm from [here](https://nodejs.org/en/dow
 
 ## Install
 
-    git clone https://github.com/nameisvinod/line-replacer.git && cd line-replacer/
+    git clone https://zgit.csez.zohocorpin.com/vinodkumar.s/line-replacer.git && cd line-replacer/
 
     npm install
 
