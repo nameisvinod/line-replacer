@@ -12,14 +12,18 @@ replace all occurance of a text in the given files
 
 Options:
 
---help Show help [boolean]
+--help :
+Show help [boolean]
 
---version Show version number [boolean]
+--version :
+Show version number [boolean]
 
---replace-config replace config file name [string][required]
+--replace-config :
+replace config file name [string][required]
 
---file-paths file containing file paths [string][required]
+--file-paths:
+file containing file paths [string][required]
 
---silent do not print out put [boolean][default: true]
+--silent : do not print output [boolean][default: true]
 
---user-prompt user prompt [boolean][default: true]
+--user-prompt : user prompt [boolean][default: true]
