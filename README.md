@@ -4,7 +4,7 @@
 
 Cli to find and replace lines in a file(s) with user prompt.
 
-## Dependencies
+## Prerequisites
 
 ### Node and NPM
 
@@ -23,7 +23,8 @@ Install the latest version of node and npm from [here](https://nodejs.org/en/dow
 ## Configuration
 
 <li>Create a folder named '<code>changeLogs</code>' in root directory</li>
-<li>'<code>filepaths.txt</code>' folder should contain the absolute path to the files that need to be updated</li>
+<li>'<code>filepaths.txt</code>' file should contain the absolute path to the files that need to be updated</li>
+<li>'<code>replace-config.json</code>' file should conatain the old and new text values as json object</li>
 
 ## Commands
 
@@ -45,7 +46,11 @@ replace all occurance of a text in the given files
 
 #### Usage
 
-    node app.js replace-all --replace-config=replace-config.json --file-path=file-path.js
+    node app.js replace-all --replace-config=replace-config.json --file-paths=filepaths.txt
+
+#### Screenshot
+
+![Image](/demo/demo.png)
 
 #### ChangeLogs
 

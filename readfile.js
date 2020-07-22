@@ -16,7 +16,7 @@ const readFile = (filepath) => {
         const data = dataBuffer.toString();
         return data;
     } catch (err) {
-        console.log(chalk.red("error in readFile", err))
+        console.log("error in readFile", err)
         return "";
     }
 }
