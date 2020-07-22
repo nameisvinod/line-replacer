@@ -1,0 +1,9 @@
+[{
+        "oldText": ".click(",
+        "newText": ".on(\"click\","
+    },
+    {
+        "oldText": ".size()",
+        "newText": ".length"
+    }
+]
