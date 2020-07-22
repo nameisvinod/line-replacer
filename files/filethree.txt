@@ -1,6 +1,0 @@
-one
-two
-line3
-line4
-FIVE
-line6
