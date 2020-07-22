@@ -1,6 +1,6 @@
 # LINE REPLACER
 
-To replace lines in a file(s) based on user prompt
+Cli to find and replace lines in a file(s) with user prompt
 
 ## Usage
 
