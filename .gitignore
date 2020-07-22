@@ -1,3 +1,4 @@
 node_modules/
-files/fileone.js
+files/
 playground.js
+changeLogs/
