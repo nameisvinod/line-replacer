@@ -1,0 +1,18 @@
+{
+    "name": "line-replacer",
+    "version": "1.0.0",
+    "description": "To replace lines in a file(s)",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Vinod",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "mz": "^2.7.0",
+        "readline": "^1.3.0",
+        "replace-in-file": "^6.1.0",
+        "yargs": "^15.4.1"
+    }
+}

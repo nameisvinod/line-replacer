@@ -1,0 +1,33 @@
+const yargs = require('yargs')
+const replace = require("./replace.js")
+
+yargs.command('replace-all',
+    'replace all occurances of from-text to to-text in all the files', (yargs) => {
+        yargs.option('replace-config', {
+            describe: 'replace config file name',
+            type: 'string',
+            demandOption: true
+        }).option('file-paths', {
+            describe: 'file containing file paths',
+            type: 'string',
+            demandOption: true
+        }).options('silent', {
+            describe: 'do not print out put',
+            type: 'boolean',
+            default: true,
+        }).options('user-prompt', {
+            describe: 'user prompt',
+            type: 'boolean',
+            default: true,
+        })
+    }, (yargs) => {
+        replace.replaceAll({
+            'replaceConfig': yargs['replace-config'],
+            'filepaths': yargs['file-paths'],
+            'silent': yargs['silent'],
+            'userprompt': yargs['user-prompt']
+        })
+    }
+)
+
+yargs.parse()

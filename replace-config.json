@@ -1,0 +1,77 @@
+[{
+        "oldText": ".click(",
+        "newText": ".on(\"click\","
+    },
+    {
+        "oldText": ".size()",
+        "newText": ".length"
+    },
+    {
+        "oldText": "$.trim(",
+        "newText": "String.prototype.trim("
+    },
+    {
+        "oldText": "$.isArray(",
+        "newText": "Array.isArray("
+    },
+    {
+        "oldText": "id=#",
+        "newText": "id=#"
+    },
+    {
+        "oldText": ".hover(",
+        "newText": ".hover("
+    },
+    {
+        "oldText": "$.unique(",
+        "newText": "$.uniqueSort("
+    },
+    {
+        "oldText": "$.type(",
+        "newText": "typeof("
+    },
+    {
+        "oldText": "$.isNumeric",
+        "newText": "$.isNumeric"
+    },
+    {
+        "oldText": "$.parseJSON(",
+        "newText": "JSON.parse("
+    },
+    {
+        "oldText": ".bind(",
+        "newText": ".on("
+    },
+    {
+        "oldText": ".unbind(",
+        "newText": ".off("
+    },
+    {
+        "oldText": ".bind(",
+        "newText": ".on("
+    },
+    {
+        "oldText": ".delegate(",
+        "newText": ".delegate("
+    },
+    {
+        "oldText": ".undelegate(",
+        "newText": ".undelegate("
+    },
+    {
+        "oldText": ".removeAttr(",
+        "newText": ".removeAttr("
+    },
+    {
+        "oldText": ".andSelf()",
+        "newText": ".addBack()"
+    },
+    {
+        "oldText": ".load(",
+        "newText": ".on(\"load\","
+    },
+    {
+        "oldText": ".error(",
+        "newText": ".on(\"error\","
+    }
+]
