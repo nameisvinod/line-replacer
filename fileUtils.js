@@ -20,8 +20,11 @@ const readFile = (filepath) => {
         return "";
     }
 }
-
+const writeFile = (filepath, data) => {
+    fs.writeFileSync(filepath, data, { flag: 'a+' })
+}
 module.exports = {
     readFile: readFile,
-    readJSONFile: readJSONFile
+    readJSONFile: readJSONFile,
+    writeFile: writeFile
 }

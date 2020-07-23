@@ -5,14 +5,19 @@ yargs.command('replace-all',
     'replace all occurances of from-text to to-text in all the files', (yargs) => {
         yargs.option('replace-config', {
             describe: 'replace config file name',
+            alias: 'rc',
             type: 'string',
-            demandOption: true
+            demandOption: true,
+            default: 'replace-config.json'
         }).option('file-paths', {
             describe: 'file containing file paths',
+            alias: 'fp',
             type: 'string',
-            demandOption: true
+            demandOption: true,
+            default: 'filepaths.txt'
         }).options('silent', {
             describe: 'do not print out put',
+            alias: 's',
             type: 'boolean',
             default: true,
         }).options('user-prompt', {

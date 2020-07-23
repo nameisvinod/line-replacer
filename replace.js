@@ -1,17 +1,17 @@
 const fs = require('mz/fs')
 const chalk = require('chalk')
-const { readJSONFile, readFile } = require('./readfile')
+const { readJSONFile, readFile, writeFile } = require('./fileUtils')
 const { question } = require('./userprompt')
 const fileReplace = require('replace-in-file');
-const { getNow } = require('./utils.js')
+const { getNow } = require('./utils.js');
 
 const removeColor = chalk.bold.red
 const addColor = chalk.green
 const linecolor = chalk.yellow
 
-
 const replaceAll = async({ replaceConfig, filepaths, silent, userprompt }) => {
 
+    console.log('silent : ' + silent)
     const replaceJSON = readJSONFile(replaceConfig)
     const filesArray = readFile(filepaths).split("\n")
     const changeLogs = []; //contains all the changes done in a set
@@ -40,8 +40,10 @@ const replaceAll = async({ replaceConfig, filepaths, silent, userprompt }) => {
                 console.log(linecolor(lineno) + "          " + oldLinePrint)
                 console.log(linecolor(lineno) + "          " + newLinePrint)
                 let ans = await question('Need to change ? y or n : ')
-                if (ans === 'q')
+                if (ans === 'q') {
+                    writeChangeLogs(changeLogs)
                     process.exit()
+                }
                 if (ans === 'n') continue
                 if (ans === 'y') {
                     changes.push({ oldLine, lineno, newLine })
@@ -57,16 +59,21 @@ const replaceAll = async({ replaceConfig, filepaths, silent, userprompt }) => {
                     results[0].lineno = change.lineno
                     results[0].change = `${oldText} to ${newText}`
                     changeLogs.push({...results[0], ...change })
-                    console.log('Replacement results:', results)
+                    if (!silent) {
+                        console.log('Replacement results:', results)
+                    }
                 } catch (error) {
                     console.error('Error occurred:', error);
                 }
             }
         }
     };
+    writeChangeLogs(changeLogs)
+}
+const writeChangeLogs = (changeLogs) => {
     try {
         let outFile = `./changeLogs/${getNow()}-changeLogs.json`;
-        fs.writeFileSync(outFile, JSON.stringify(changeLogs), { flag: 'a+' })
+        writeFile(outFile, JSON.stringify(changeLogs))
         console.log(chalk.keyword('orange')(`outfile written to ${outFile}`))
     } catch (err) {
         console.log(err)
