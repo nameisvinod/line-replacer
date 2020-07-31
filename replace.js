@@ -11,7 +11,6 @@ const linecolor = chalk.yellow
 
 const replaceAll = async({ replaceConfig, filepaths, silent, userprompt }) => {
 
-    console.log('silent : ' + silent)
     const replaceJSON = readJSONFile(replaceConfig)
     const filesArray = readFile(filepaths).split("\n")
     const changeLogs = []; //contains all the changes done in a set

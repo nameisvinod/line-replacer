@@ -52,15 +52,17 @@ replace all occurance of a text in the given files
 
 #### Usage
 
-    node app.js replace-all --replace-config=replace-config.json --file-paths=filepaths.txt
-    or just
-    node app.js replace-all // will run with default values
+node app.js replace-all --replace-config=replace-config.json --file-paths=filepaths.txt
+or just
+node app.js replace-all // will run with default values
 
     node app.js replace-all --s=false   // to omit logs
 
 #### Screenshot
 
-![Image](/demo/demo.png)
+# ![Image](/demo/demo.png)
+
+    node app.js replace-all --replace-config=replace-config.json --file-path=file-path.js
 
 #### ChangeLogs
 
