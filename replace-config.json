@@ -1,4 +1,5 @@
-[{
+[
+    {
         "oldText": ".click(",
         "newText": ".on(\"click\","
     },
